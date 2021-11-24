@@ -1,3 +1,25 @@
+function eqArrays(arr1,arr2){
+  if (arr1.length !== arr2.length) {
+    return false;
+  }
+  for (let i = 0; i < arr1.length; i++) {
+    if (arr1[i] !== arr2[i]) {
+      return false;
+    }
+  }
+  return true;
+}
+
+const assertArraysEqual = function(array1,array2){
+  const result = eqArrays(array1,array2);
+  if (!result){
+    console.log(`❌ ❌ ❌ These arrays are NOT equal`)
+  }
+  else {
+    console.log(`✅ ✅ ✅ These arrays ARE equal`)
+  }
+};
+
 const letterPositions = function(sentence){
   const results = {};
   //const  returned = sentence.split(" ").join("");

@@ -42,5 +42,4 @@ const letterPositions = function(sentence){
   return results;
 }
 
-let re = letterPositions("lighthouse in the house");
-console.log(re);
+console.log(assertArraysEqual(letterPositions("lighthouse in the house").i,[1,11]));
